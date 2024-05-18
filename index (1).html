@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Winterfest Wish</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+    body {
+      margin: 0;
+      background-color: #121212;
+      color: #ddd;
+      font-family: 'Quicksand', Arial, sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #1f1f1f;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar h1 {
+      color: #fff;
+      margin: 0;
+    }
+
+    .navbar nav a {
+      color: #bbb;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+
+    .navbar nav a:hover {
+      color: #fff;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .lyrics-container h1 {
+      font-weight: bold;
+      margin: 20px 0;
+      color: #fff;
+    }
+
+    .lyrics-container p {
+      font-weight: bold;
+      font-size: 24px;
+      margin: 10px 0;
+    }
+
+    #lyrics span {
+      color: #666;
+      transition: color 0.15s;
+    }
+
+    #lyrics span.active {
+      color: #fff;
+    }
+
+    img {
+      border-radius: 10px;
+      max-width: 128px;
+      max-height: 128px;
+      margin-top: 20px;
+    }
+
+    .speed-control {
+      margin-top: 20px;
+    }
+
+    .speed-control label {
+      font-size: 18px;
+      color: #fff;
+    }
+
+    .speed-control input {
+      width: 100%;
+      max-width: 300px;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1f1f1f;
+      color: #bbb;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <h1>Winterfest Wish</h1>
+    <nav>
+      <a href="/profile.html">Made by smoresxo</a>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="lyrics-container">
+      <img src="winterfest-wish.png" alt="Winterfest Wish">
+      <h1>Winterfest Wish</h1>
+      <p>Epic Games - 2023</p>
+      <audio id="audio-player" controls>
+        <source src="winterfest-wish.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <div class="speed-control">
+        <label for="speed-slider">Speed: <span id="speed-value">1.00x</span></label>
+        <input type="range" id="speed-slider" min="0.50" max="1.50" value="1.00" step="0.01">
+      </div>
+      <p id="lyrics">
+        <span data-time="0">This</span>
+        <span data-time="500">year,</span>
+        <span data-time="900">there's</span>
+        <span data-time="1300">a</span>
+        <span data-time="1500">new</span>
+        <span data-time="1600">home</span>
+        <span data-time="1900">for</span>
+        <span data-time="2200">the</span>
+        <span data-time="2300">holidays</span>
+        <br>
+        <span data-time="3700">Join</span>
+        <span data-time="3800">me</span>
+        <span data-time="4000">on</span>
+        <span data-time="4200">Winter</span>
+        <span data-time="4400">Island, </span>
+        <span data-time="4600">where</span>
+        <span data-time="4800">the</span>
+        <span data-time="5000">loot</span>
+        <span data-time="5200">is</span>
+        <span data-time="5400">as</span>
+        <span data-time="5600">deep</span>
+        <span data-time="5800">as</span>
+        <span data-time="6000">the</span>
+        <span data-time="6200">snow</span>
+        <br>
+        <span data-time="6300">And</span>
+        <span data-time="6400">dreams</span>
+        <span data-time="6600">come</span>
+        <span data-time="6800">true</span>
+        <span data-time="7000">for</span>
+        <span data-time="7200">those</span>
+        <span data-time="7400">in</span>
+        <span data-time="7600">the</span>
+        <span data-time="7800">know..</span>
+        <br>
+        <span data-time="7800">Grab</span>
+        <span data-time="8250">your</span>
+        <span data-time="8700">merriest</span>
+        <span data-time="9150">pickaxe,</span>
+        <span data-time="9600">squad</span>
+        <span data-time="10050">up,</span>
+        <span data-time="10500">and</span>
+        <span data-time="10950">make</span>
+        <span data-time="11400">all,</span>
+        <span data-time="11850">our,</span>
+        <span data-time="12300">wishes,</span>
+        <span data-time="12750">come,</span>
+        <span data-time="13200">true...</span>
+        <br>
+        <span data-time="13700">Ready</span>
+        <span data-time="14300">up,</span>
+        <span data-time="14900">drop</span>
+        <span data-time="15500">in</span>
+        <span data-time="16100">with</span>
+        <span data-time="16700">me</span>
+        <br>
+        <span data-time="17350">Make</span>
+        <span data-time="17700">a</span>
+        <span data-time="18050">wish,</span>
+        <span data-time="18400">that</span>
+        <span data-time="18750">it's</span>
+        <span data-time="19100">a</span>
+        <span data-time="19450">victory</span>
+
+
+
+
+
+        <br>
+        <span data-time="19800">We</span>
+        <span data-time="20150">can</span>
+        <span data-time="20500">dream,</span>
+        <span data-time="20850">if</span>
+        <span data-time="21200">we</span>
+        <span data-time="21550">just</span>
+        <span data-time="21900">believe</span>
+        <br>
+        <span data-time="22250">All</span>
+        <span data-time="22600">the</span>
+        <span data-time="22950">loot</span>
+        <span data-time="23300">will</span>
+        <span data-time="23650">find</span>
+        <span data-time="24000">us,</span>
+        <span data-time="24350">winter</span>
+        <span data-time="24700">time</span>
+        <br>
+        <span data-time="25050">Find</span>
+        <span data-time="25400">a</span>
+        <span data-time="25750">chest,</span>
+        <span data-time="26100">grab</span>
+        <span data-time="26450">a</span>
+        <span data-time="26800">quest,</span>
+        <span data-time="27150">chop</span>
+        <span data-time="27500">down</span>
+        <span data-time="27850">a</span>
+        <span data-time="28200">tree</span>
+        <br>
+        <span data-time="28550">I'll</span>
+        <span data-time="28900">drop</span>
+        <span data-time="29250">a</span>
+        <span data-time="29600">shield,</span>
+        <span data-time="29950">if</span>
+        <span data-time="30300">you</span>
+        <span data-time="30650">drop</span>
+        <span data-time="31000">one</span>
+        <span data-time="31350">for</span>
+        <span data-time="31700">me</span>
+
+
+
+
+
+        <br>
+        <span data-time="32050">This</span>
+        <span data-time="32400">Winterfest,</span>
+        <span data-time="32750">will</span>
+        <span data-time="33100">be</span>
+        <span data-time="33450">the</span>
+        <span data-time="33800">best</span>
+        <br>
+        <span data-time="34150">All</span>
+        <span data-time="34500">the</span>
+        <span data-time="34850">loot</span>
+        <span data-time="35200">will</span>
+        <span data-time="35550">find</span>
+        <span data-time="35900">us,</span>
+        <span data-time="36250">winter</span>
+        <span data-time="36600">time</span>
+        <br>
+        <span data-time="36950">My</span>
+        <span data-time="37300">Winter</span>
+        <span data-time="37650">Wish</span>
+        <span data-time="38000">for</span>
+        <span data-time="38350">Lil'</span>
+        <span data-time="38700">Whip</span>
+        <span data-time="39050">and</span>
+        <span data-time="39400">Split</span>
+        <br>
+        <span data-time="39750">It's</span>
+        <span data-time="40100">some</span>
+        <span data-time="40450">ice</span>
+        <span data-time="40800">cream</span>
+        <span data-time="41150">cone</span>
+        <span data-time="41500">float,</span>
+        <span data-time="41850">with</span>
+        <span data-time="42200">some</span>
+        <span data-time="42550">Fishstick</span>
+        <span data-time="42900">drip</span>
+        <br>
+        <span data-time="43250">A</span>
+        <span data-time="43600">sticker</span>
+        <span data-time="43950">for</span>
+        <span data-time="44300">Peely,</span>
+        <span data-time="44650">hear</span>
+        <span data-time="45000">the</span>
+        <span data-time="45350">sheild</span>
+        <span data-time="45700">potion             
+          <span data-time="46050">pop</span>
+          <br>
+          <span data-time="46400">And</span>
+          <span data-time="46750">my</span>
+          <span data-time="47100">only</span>
+          <span data-time="47450">wish</span>
+          <span data-time="47800">is</span>
+          <span data-time="48150">to</span>
+          <span data-time="48500">come</span>
+          <span data-time="48850">out</span>
+          <span data-time="49200">on</span>
+          <span data-time="49550">top</span>
+          <br>
+          <span data-time="49900">Hey</span>
+          <span data-time="50250">gang,</span>
+          <span data-time="50600">what's</span>
+          <span data-time="50950">going</span>
+          <span data-time="51300">on</span>
+          <span data-time="51650">here?</span>
+          <br>
+          <span data-time="52000">I</span>
+          <span data-time="52350">see</span>
+          <span data-time="52700">no</span>
+          <span data-time="53050">lights,</span>
+          <span data-time="53400">loot</span>
+          <span data-time="53750">shining </span>
+          <span data-time="54100">bright</span>
+          <br>
+          <span data-time="54450">What's</span>
+          <span data-time="54800">up?</span>
+          <span data-time="55150">No</span>
+          <span data-time="55500">winter</span>
+          <span data-time="55850">this</span>
+          <span data-time="56200">year?</span>
+          <span data-time="56550">Let's</span>
+          <span data-time="56900">have</span>
+          <span data-time="57250">presents</span>
+          <span data-time="57600">for</span>
+          <span data-time="57950">all,</span>
+          <span data-time="58300">and</span>
+          <span data-time="58650">carol</span>
+          <span data-time="59000">cheer</span>
+          <br>
+          <span data-time="59350">I'll</span>
+          <span data-time="59700">go</span>
+          <span data-time="60050">out,</span>
+          <span data-time="60400">scope</span>
+          <span data-time="60750">it</span>
+          <span data-time="61100">out,</span>
+          <span data-time="61450">you</span>
+          <span data-time="61800">can</span>
+          <span data-time="62150">follow</span>
+          <span data-time="62500">me</span>
+          <br>
+          <span data-time="62850">Got</span>
+          <span data-time="63200">the</span>
+          <span data-time="63550">boogie</span>
+          <span data-time="63900">bomb,</span>
+          <span data-time="64250">to</span>
+          <span data-time="64600">spread</span>
+          <span data-time="64950">our</span>
+          <span data-time="65300">winter</span>
+          <span data-time="65650">glee</span>
+          <br>
+          <span data-time="66000">It's</span>
+          <span data-time="66350">a</span>
+          <span data-time="66700">treat,</span>
+          <span data-time="67050">to</span>
+          <span data-time="67400">watch</span>
+          <span data-time="67750">them</span>
+          <span data-time="68100">flee</span>
+          <br>
+          <span data-time="68450">All</span>
+          <span data-time="68800">the</span>
+          <span data-time="69150">loot</span>
+          <span data-time="69500">will</span>
+          <span data-time="69850">find</span>
+          <span data-time="70200">us,</span>
+          <span data-time="70550">winter</span>
+          <span data-time="70900">time</span>
+          <br>
+          <span data-time="71250">Want</span>
+          <span data-time="71600">all</span>
+          <span data-time="71950">the</span>
+          <span data-time="72300">emotes,</span>
+          <span data-time="72650">shoulder</span>
+          <span data-time="73000">swap</span>
+          <span data-time="73350">our</span>
+          <span data-time="73700">love</span>
+          <br>
+          <span data-time="74050">Some</span>
+          <span data-time="74400">flashing</span>
+          <span data-time="74750">new</span>
+          <span data-time="75100">contrast,</span>
+          <span data-time="75450">to</span>
+          <span data-time="75800">fall</span>
+          <span data-time="76150">from</span>
+          <span data-time="76500">above</span>
+          <br>
+          <span data-time="76850">Fresh</span>
+          <span data-time="77200">new</span>
+          <span data-time="77550">outfits,</span>
+          <span data-time="77900">for</span>
+          <span data-time="78250">all</span>
+          <span data-time="78600">my</span>
+          <span data-time="78950">pals</span>
+          <br>
+          <span data-time="79300">But</span>
+          <span data-time="79650">what</span>
+          <span data-time="80000">I</span>
+          <span data-time="80350">really</span>
+          <span data-time="80700">want</span>
+          <span data-time="81050">is</span>
+          <span data-time="81400">that</span>
+          <span data-time="81750">Victory</span>
+          <span data-time="82100">Royale</span>
+          <br>
+          <span data-time="82450">Hey</span>
+          <span data-time="82800">squad,</span>
+          <span data-time="83150">your</span>
+          <span data-time="83500">health</span>
+          <span data-time="83850">getting</span>
+          <span data-time="84200">low</span>
+          <br>
+          <span data-time="84550">You</span>
+          <span data-time="84900">keep</span>
+          <span data-time="85250">getting</span>
+          <span data-time="85600">knocked</span>
+          <span data-time="85950">down,</span>
+          <span data-time="86300">face</span>
+          <span data-time="86650">down</span>
+          <span data-time="87000">in</span>
+          <span data-time="87350">the</span>
+          <span data-time="87700">snow</span>
+          <br>
+          <span data-time="88050">No</span>
+          <span data-time="88400">fear,</span>
+          <span data-time="88750">may</span>
+          <span data-time="89100">your</span>
+          <span data-time="89450">storm</span>
+          <span data-time="89800">be</span>
+          <span data-time="90150">clear</span>
+          <br>
+          <span data-time="90500">May</span>
+          <span data-time="90850">your</span>
+          <span data-time="91200">loot</span>
+          <span data-time="91550">glow</span>
+          <span data-time="91900">bright,</span>
+          <span data-time="92250">and</span>
+          <span data-time="92600">shine</span>
+          <span data-time="92950">all</span>
+          <span data-time="93300">year</span>
+          <br>
+          <span data-time="93650">[Instrumental Breakdown]</span>
+          <br>
+          <span data-time="93650">Healed</span>
+          <span data-time="94000">again,</span>
+          <span data-time="94350">we'll</span>
+          <span data-time="94700">defend</span>
+          <span data-time="95050">with</span>
+          <span data-time="95400">all</span>
+          <span data-time="95750">our</span>
+          <span data-time="96100">friends</span>
+          <br>
+          <span data-time="96450">Stick</span>
+          <span data-time="96800">together</span>
+          <span data-time="97150">and</span>
+          <span data-time="97500">we'll</span>
+          <span data-time="97850">make</span>
+          <span data-time="98200">it</span>
+          <span data-time="98550">till</span>
+          <span data-time="98900">the</span>
+          <span data-time="99250">end</span>
+          <br>
+          <span data-time="99600">Full</span>
+          <span data-time="99950">send</span>
+          <span data-time="100300">with</span>
+          <span data-time="100650">gold</span>
+          <span data-time="101000">to</span>
+          <span data-time="101350">spend</span>
+          <br>
+          <span data-time="101700">All</span>
+          <span data-time="102050">the</span>
+          <span data-time="102400">loot</span>
+          <span data-time="102750">will</span>
+          <span data-time="103100">find</span>
+          <span data-time="103450">us,</span>
+          <span data-time="103800">winter</span>
+          <span data-time="104150">time</span>
+          <br>
+          <span data-time="104500">Don't</span>
+          <span data-time="104850">be</span>
+          <span data-time="105200">down;</span>
+          <span data-time="105550">stick</span>
+          <span data-time="105900">it</span>
+          <span data-time="106250">out,</span>
+          <span data-time="106600">We'll</span>
+          <span data-time="106950">take</span>
+          <span data-time="107300">the</span>
+          <span data-time="107650">crown</span>
+          <br>
+          <span data-time="108000">Being</span>
+          <span data-time="108350">crew,</span>
+          <span data-time="108700">will</span>
+          <span data-time="109050">never</span>
+          <span data-time="109400">let</span>
+          <span data-time="109750">me</span>
+          <span data-time="110100">down</span>
+          <br>
+          <span data-time="110450">Show</span>
+          <span data-time="110800">the</span>
+          <span data-time="111150">love,</span>
+          <span data-time="111500">we</span>
+          <span data-time="111850">got</span>
+          <span data-time="112200">the</span>
+          <span data-time="112550">dub</span>
+          <br>
+          <span data-time="113900">All</span>
+          <span data-time="114250">the</span>
+          <span data-time="114600">loot</span>
+          <span data-time="114950">will</span>
+          <span data-time="115300">find</span>
+          <span data-time="115650">us,</span>
+          <span data-time="116000">winter</span>
+          <span data-time="116350">time.</span>
+          <br>
+          <span data-time="116700">Ready</span>
+          <span data-time="117050">up</span>
+          <span data-time="117400">and</span>
+          <span data-time="117750">drop</span>
+          <span data-time="118100">with</span>
+          <span data-time="118450">me</span>
+          <br>
+          <span data-time="118800">I'll</span>
+          <span data-time="119150">make</span>
+          <span data-time="119500">a</span>
+          <span data-time="119850">wish,</span>
+          <span data-time="120200">that</span>
+          <span data-time="120550">gets</span>
+          <span data-time="120900">our</span>
+          <span data-time="121250">victory</span>
+          <br>
+          <span data-time="121600">We</span>
+          <span data-time="121950">can</span>
+          <span data-time="122300">dream</span>
+          <span data-time="122650">if</span>
+          <span data-time="123000">we</span>
+          <span data-time="123350">just</span>
+          <span data-time="123700">believe</span>
+          <br>
+          <span data-time="124050">All</span>
+          <span data-time="124400">the</span>
+          <span data-time="124750">loot</span>
+          <span data-time="125100">will</span>
+          <span data-time="125450">find</span>
+          <span data-time="125800">us,</span>
+          <span data-time="126150">winter</span>
+          <span data-time="126500">time</span>
+          <br>
+          <span data-time="126850">Find</span>
+          <span data-time="127200">a</span>
+          <span data-time="127550">chest,</span>
+          <span data-time="127900">grab</span>
+          <span data-time="128250">a</span>
+          <span data-time="128600">quest,</span>
+          <span data-time="128950">chop</span>
+          <span data-time="129300">down</span>
+          <span data-time="129650">a</span>
+          <span data-time="130000">tree</span>
+          <br>
+          <span data-time="130350">I'll</span>
+          <span data-time="130700">drop</span>
+          <span data-time="131050">a</span>
+          <span data-time="131400">shield,</span>
+          <span data-time="131750">if</span>
+          <span data-time="132100">you</span>
+          <span data-time="132450">drop</span>
+          <span data-time="132800">one</span>
+          <span data-time="133150">for</span>
+          <span data-time="133500">me</span>
+          <br>
+          <span data-time="133850">This</span>
+          <span data-time="134200">Winterfest</span>
+          <span data-time="134550">will</span>
+          <span data-time="134900">be</span>
+          <span data-time="135250">the</span>
+          <span data-time="135600">best</span>
+          <br>
+          <span data-time="135950">And</span>
+          <span data-time="136300">cheers</span>
+          <span data-time="136650">to</span>
+          <span data-time="137000">you,</span>
+          <span data-time="137350">may</span>
+          <span data-time="137700">all</span>
+          <span data-time="138050">our</span>
+          <span data-time="138400">wishes</span>
+          <span data-time="138750">come</span>
+          <span data-time="139100">true...</span>
+      </p>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const lyricsSpans = document.querySelectorAll('#lyrics span');
+        const audioPlayer = document.getElementById('audio-player');
+        const speedSlider = document.getElementById('speed-slider');
+        const speedValue = document.getElementById('speed-value');
+
+        function highlightLyrics() {
+          const currentTime = audioPlayer.currentTime * 1000;
+          let previousWord = null;
+
+          lyricsSpans.forEach(span => {
+            const wordTime = parseInt(span.getAttribute('data-time'), 10);
+
+            if (currentTime >= wordTime && currentTime < wordTime + 1000) {
+              span.classList.add('active');
+            }
+
+            if (currentTime >= wordTime) {
+              previousWord = span;
+            }
+          });
+
+          if (previousWord) {
+            previousWord.classList.add('active');
+          }
+
+          if (!audioPlayer.paused) {
+            requestAnimationFrame(highlightLyrics);
+          }
+        }
+
+        audioPlayer.addEventListener('play', () => {
+          highlightLyrics();
+        });
+
+        audioPlayer.addEventListener('timeupdate', () => {
+          highlightLyrics();
+        });
+
+        speedSlider.addEventListener('input', () => {
+          const speed = parseFloat(speedSlider.value);
+          audioPlayer.playbackRate = speed;
+          speedValue.textContent = speed.toFixed(2) + 'x';
+        });
+
+        // Add custom timestamp navigation
+        document.querySelectorAll('#lyrics span').forEach(span => {
+          span.addEventListener('click', () => {
+            const time = parseInt(span.getAttribute('data-time'), 10) / 1000;
+            audioPlayer.currentTime = time;
+          });
+        });
+
+        // Ensure highlights are correct when tab is re-focused
+        document.addEventListener('visibilitychange', () => {
+          if (!document.hidden) {
+            highlightLyrics();
+          }
+        });
+
+        // Fix progress bar interaction
+        const progressContainer = audioPlayer.closest('.audio-player-container');
+        if (progressContainer) {
+          const progressBar = progressContainer.querySelector('.progress-bar');
+          if (progressBar) {
+            progressBar.addEventListener('click', (e) => {
+              const rect = progressBar.getBoundingClientRect();
+              const offsetX = e.clientX - rect.left;
+              const width = rect.width;
+              const duration = audioPlayer.duration;
+              const newTime = (offsetX / width) * duration;
+              audioPlayer.currentTime = newTime;
+            });
+          }
+        }
+      });
+    </script>
+  </div>
+</body>
+
+</html>
